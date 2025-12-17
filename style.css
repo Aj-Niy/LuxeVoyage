@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #79d3e4 0%, #f7c99b 50%, #fdfdfd 100%);
+    color: #1b2838;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lv-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.lv-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(14px);
+    background: rgba(8, 35, 61, 0.08);
+}
+
+.lv-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.lv-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.lv-logo-icon {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+.lv-logo-text {
+    letter-spacing: 0.04em;
+}
+
+.lv-menu {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: #f3f6ff;
+}
+
+.lv-menu a {
+    position: relative;
+}
+
+.lv-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background: #ffd37e;
+    transition: width 0.2s ease;
+}
+
+.lv-menu a:hover::after {
+    width: 100%;
+}
+
+.lv-btn-outline {
+    padding: 0.55rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.1s;
+}
+
+.lv-btn-outline:hover {
+    background: #ffffff;
+    color: #1b2838;
+    transform: translateY(-1px);
+}
+
+.lv-main {
+    padding-bottom: 3rem;
+}
+
+.lv-hero {
+    padding: 2.5rem 0 2rem;
+}
+
+.lv-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 32px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.lv-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.lv-hero-tag {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8b9bb5;
+}
+
+.lv-hero-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: #122132;
+}
+
+.lv-hero-title span {
+    color: #ff9f55;
+}
+
+.lv-hero-subtitle {
+    font-size: 0.95rem;
+    max-width: 30rem;
+    color: #516174;
+}
+
+.lv-section-subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #8b9bb5;
+}
+
+.lv-popular-grid {
+    margin-top: 0.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.lv-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.lv-card-img {
+    height: 110px;
+    object-fit: cover;
+}
+
+.lv-card-body {
+    padding: 0.7rem 0.8rem 0.85rem;
+}
+
+.lv-card-body h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.lv-card-body p {
+    font-size: 0.78rem;
+    color: #7a8899;
+}
+
+.lv-hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lv-hero-image {
+    border-radius: 26px;
+    object-fit: cover;
+    height: 100%;
+    max-height: 480px;
+    width: 100%;
+}
+
+.lv-booking {
+    margin-top: -1.4rem;
+}
+
+.lv-booking-form {
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 999px;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0.9rem 1.4rem;
+    flex-wrap: wrap;
+}
+
+.lv-form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+
+.lv-form-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin-bottom: 0.15rem;
+}
+
+.lv-form-group select,
+.lv-form-group input {
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: #0f172a;
+    padding: 0.15rem 0;
+    outline: none;
+}
+
+.lv-btn-primary {
+    border: none;
+    padding: 0.75rem 1.7rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffb877, #ff9052);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 14px 25px rgba(255, 144, 82, 0.4);
+    white-space: nowrap;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.lv-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 32px rgba(255, 144, 82, 0.48);
+}
+
+.lv-section {
+    padding: 3rem 0 2.5rem;
+}
+
+.lv-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    color: #111827;
+}
+
+.lv-section-text {
+    font-size: 0.95rem;
+    max-width: 36rem;
+    color: #4b5563;
+}
+
+.lv-table-section {
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 2rem;
+    border-radius: 28px;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.18);
+}
+
+.lv-table-wrapper {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+
+.lv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.lv-table thead {
+    background: #0f172a;
+    color: #f9fafb;
+}
+
+.lv-table th,
+.lv-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+.lv-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+.lv-table tbody tr:hover {
+    background: #eef2ff;
+}
+
+.lv-iframe-section {
+    padding-top: 2.5rem;
+}
+
+.lv-iframe-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.lv-iframe-wrapper iframe {
+    width: 100%;
+    min-height: 260px;
+    border-radius: 22px;
+    border: none;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.3);
+}
+
+.lv-contact-section {
+    padding-top: 2.5rem;
+}
+
+.lv-contact-form {
+    margin-top: 1.4rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.lv-form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+}
+
+.lv-contact-form input{
+    flex: 1;
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+.lv-contact-form textarea {
+    width: 100%;
+    flex: 1;
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+.lv-footer {
+    padding: 1.8rem 0 2.2rem;
+    background: rgba(15, 23, 42, 0.9);
+    color: #9ca3af;
+}
+
+.lv-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.lv-footer-links {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 0.85rem;
+}
+
+.lv-footer-links a:hover {
+    color: #e5e7eb;
+}
+
+@media (max-width: 900px) {
+    .lv-hero-inner {
+        grid-template-columns: 1fr;
+    }
+    .lv-hero-right {
+        order: -1;
+    }
+    .lv-booking-form {
+        border-radius: 26px;
+    }
+    .lv-iframe-layout {
+        grid-template-columns: 1fr;
+    }
+    .lv-popular-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .lv-nav {
+        gap: 0.6rem;
+    }
+    .lv-menu {
+        display: none;
+    }
+    .lv-hero-title {
+        font-size: 2rem;
+    }
+    .lv-popular-grid {
+        grid-template-columns: 1fr;
+    }
+    .lv-booking-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .lv-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+}

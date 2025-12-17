@@ -1,20 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeVoyage</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxeVoyage - High-End Tour Booking Platform</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to LuxeVoyage</h1>
+    <header class="lv-header">
+        <div class="lv-container lv-nav">
+            <div class="lv-logo">
+                <span class="lv-logo-icon">✈</span>
+                <span class="lv-logo-text">LuxeVoyage</span>
+            </div>
+            <nav class="lv-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#packages">Packages</a>
+                <a href="#book">Book Now</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#book" class="lv-btn-outline">Explore</a>
+        </div>
     </header>
-    <main>
-        <p>Your luxury travel experience starts here.</p>
+
+    <main id="home" class="lv-main">
+        <section class="lv-hero">
+            <div class="lv-container lv-hero-inner">
+                <div class="lv-hero-left">
+                    <p class="lv-hero-tag">MOUNTAINS • PLAINS • BEACHES</p>
+                    <h1 class="lv-hero-title">
+                        Spend your vacation<br>
+                        with our <span>exclusive tours</span>.
+                    </h1>
+                    <p class="lv-hero-subtitle">
+                        LuxeVoyage curates premium travel experiences, hand-picked stays, and
+                        unforgettable journeys across the world's most beautiful destinations.
+                    </p>
+
+                    <h3 class="lv-section-subtitle">Most Popular</h3>
+
+                    <div class="lv-popular-grid">
+                        <article class="lv-card">
+                            <img src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Scotland" class="lv-card-img">
+                            <div class="lv-card-body">
+                                <h4>Trip to Scotland</h4>
+                                <p>31 people going</p>
+                            </div>
+                        </article>
+
+                        <article class="lv-card">
+                            <img src="https://cdn.kimkim.com/files/a/images/5fa70507214ac6d6a4f3fdfdbbd01754a8e4a284/original-ced3edd942452d16fc6ceefa18c8451e.jpg" alt="Egypt" class="lv-card-img">
+                            <div class="lv-card-body">
+                                <h4>Trip to Egypt</h4>
+                                <p>27 people going</p>
+                            </div>
+                        </article>
+
+                        <article class="lv-card">
+                            <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Greece" class="lv-card-img">
+                            <div class="lv-card-body">
+                                <h4>Trip to Greece</h4>
+                                <p>20 people going</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="lv-hero-right">
+                    <img src="Images/smiley-woman-posing-her-baggage.jpg" 
+                         alt="LuxeVoyage hero" class="lv-hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="book" class="lv-booking">
+            <div class="lv-container">
+                <form class="lv-booking-form">
+                    <div class="lv-form-group">
+                        <label for="destination">Accommodation</label>
+                        <select id="destination" name="destination">
+                            <option>6730 Luna Land North</option>
+                            <option>Maldives Ocean Villa</option>
+                            <option>Santorini Cliff Suite</option>
+                            <option>Swiss Alpine Chalet</option>
+                        </select>
+                    </div>
+
+                    <div class="lv-form-group">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin" name="checkin">
+                    </div>
+
+                    <div class="lv-form-group">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout" name="checkout">
+                    </div>
+
+                    <div class="lv-form-group">
+                        <label for="guests">Guests</label>
+                        <select id="guests" name="guests">
+                            <option>2 adults</option>
+                            <option>1 adult</option>
+                            <option>3 adults</option>
+                            <option>Family package</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="lv-btn-primary">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="packages" class="lv-section lv-table-section">
+            <div class="lv-container">
+                <h2 class="lv-section-title">Premium Package Overview</h2>
+                <p class="lv-section-text">
+                    Here is a quick comparison of our signature LuxeVoyage experiences.
+                </p>
+
+                <div class="lv-table-wrapper">
+                    <table class="lv-table">
+                        <thead>
+                            <tr>
+                                <th>Package</th>
+                                <th>Location</th>
+                                <th>Duration</th>
+                                <th>Price</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Emerald Highlands</td>
+                                <td>Scotland</td>
+                                <td>6 Nights</td>
+                                <td>₹1,20,000</td>
+                                <td>★ ★ ★ ★ ☆</td>
+                            </tr>
+                            <tr>
+                                <td>Pharaoh's Legacy</td>
+                                <td>Egypt</td>
+                                <td>5 Nights</td>
+                                <td>₹1,00,000</td>
+                                <td>★ ★ ★ ★ ★</td>
+                            </tr>
+                            <tr>
+                                <td>Aegean Dreams</td>
+                                <td>Greece</td>
+                                <td>7 Nights</td>
+                                <td>₹1,80,000</td>
+                                <td>★ ★ ★ ★ ★</td>
+                            </tr>
+                            <tr>
+                                <td>Crystal Lagoon Escape</td>
+                                <td>Maldives</td>
+                                <td>4 Nights</td>
+                                <td>₹1,10,000</td>
+                                <td>★ ★ ★ ★ ☆</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="lv-section lv-iframe-section">
+            <div class="lv-container lv-iframe-layout">
+                <div class="lv-iframe-text">
+                    <h2 class="lv-section-title">Experience LuxeVoyage</h2>
+                    <p class="lv-section-text">
+                        Take a glimpse at one of our curated journeys. We partner with world-class
+                        resorts, private guides, and premium airlines to make every moment special.
+                    </p>
+                </div>
+                <div class="lv-iframe-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Scxs7L0vhZ4" 
+                        title="Luxury Travel Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="lv-section">
+            <div class="lv-container">
+                <h2 class="lv-section-title">About LuxeVoyage</h2>
+                <p class="lv-section-text">
+                    <b>LuxeVoyage</b> is a high-end tour booking platform focused on creating
+                    bespoke travel experiences. From private island retreats to scenic mountain
+                    escapes, our team designs every itinerary with attention, comfort, and elegance.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="lv-section lv-contact-section">
+            <div class="lv-container">
+                <h2 class="lv-section-title">Contact Us</h2>
+                <p class="lv-section-text">
+                    Have a special request? Share your dream vacation idea and our travel specialists
+                    will get back to you.
+                </p>
+                <form class="lv-contact-form">
+                    <div class="lv-form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <textarea rows="4" placeholder="Describe your ideal luxury trip..."></textarea>
+                    <button type="submit" class="lv-btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 LuxeVoyage. All rights reserved.</p>
+
+    <footer class="lv-footer">
+        <div class="lv-container lv-footer-inner">
+            <p>© 2025 LuxeVoyage. All rights reserved.</p>
+            <div class="lv-footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
